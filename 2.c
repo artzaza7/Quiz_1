@@ -1,16 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    int number;
+    long int number;
     int check=0;
     int boom=0;
-    scanf("%d",&number);
+    scanf("%ld",&number);
     int min=number-1,max=number+1;
     while(check==0)
     {
         for(int i=2;i<number;i++)
         {
-            if(number%i==0)
+            if(number%i==0)1
             {
                 check=2;
                 break;
@@ -37,13 +37,15 @@ int main()
                 }
             }
         }
-        for(int i=number;i<number+2&&boom!=1;i++)
+        boom=0;
+        for(int i=number;i<=number+2&&boom!=1;i++)
         {
             for(int j=2;j<10;j++)
             {
                 if(i%j==0)
                 {
                     boom=2;
+                    max=number;
                     break;
                 }
                 else
