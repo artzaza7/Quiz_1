@@ -17,6 +17,11 @@ int main()
     }
     for(int i=0;i<man;i++)
     {
+        if(give[i-1]==give[i])
+        {
+            win=i;
+            break;
+        }
         if(win<give[i])
         {
             win=i;
