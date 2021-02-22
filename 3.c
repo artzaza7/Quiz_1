@@ -14,6 +14,7 @@ int main()
             scanf("%d",&score[i][j]);
             give[i]=give[i]+score[i][j];
         }
+        give[i]=(give[i]/3);
     }
     for(int i=0;i<man;i++)
     {
